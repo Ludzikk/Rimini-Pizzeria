@@ -21,3 +21,24 @@
 		border-bottom: 1px solid transparent;
 	}
 }
+
+@keyframes show-nav {
+	from {
+		top: -500px;
+	}
+
+	to {
+		top: 0;
+	}
+}
+
+@keyframes hide-nav {
+	from {
+		top: 0;
+	}
+
+	to {
+		top: -500px;
+		display: none;
+	}
+}

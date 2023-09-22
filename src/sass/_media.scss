@@ -6,8 +6,16 @@
 
 @media (min-width: 992px) {
 	.nav {
-		&__list {
+		&__list, &__btn {
 			display: flex;
+		}
+
+		&__hamburger {
+			display: none;
+		}
+
+		&__container {
+			justify-content: space-around;
 		}
 	}
 
@@ -42,5 +50,11 @@
 				border-radius: 82% 0% 0% 0% / 87% 25% 25% 0%;
 			}
 		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav__item {
+		font-size: 2rem;
 	}
 }

@@ -1,5 +1,7 @@
 const nav = document.querySelector(".nav");
 const faqItems = document.querySelectorAll(".faq");
+const hamburgerNavBtn = document.querySelector(".nav__hamburger");
+const mobileNav = document.querySelector(".nav__mobilecontainer");
 let triggerNav;
 
 const addBorderToNav = () => {
@@ -21,11 +23,23 @@ const addBorderToNav = () => {
 	}
 };
 
-function toggleFaq() {
-	this.classList.toggle("faq-active");
-}
+// function toggleFaq() {
+// 	this.classList.toggle("faq-active");
+// }
 
-document.addEventListener("scroll", addBorderToNav);
-faqItems.forEach((item) => {
-	item.addEventListener("click", toggleFaq);
-});
+const toggleMobileNav = () => {
+	hamburgerNavBtn.classList.toggle("is-active");
+	mobileNav.classList.toggle("active-mobile-nav");
+	mobileNav.classList.toggle("unactive-mobile-nav");
+	mobileNav.classList.remove("hidden");
+};
+
+const addListeners = () => {
+	document.addEventListener("scroll", addBorderToNav);
+	// faqItems.forEach((item) => {
+	// 	item.addEventListener("click", toggleFaq);
+	// });
+	hamburgerNavBtn.addEventListener("click", toggleMobileNav);
+};
+
+addListeners();
