@@ -1,0 +1,23 @@
+@keyframes nav-stick {
+	from {
+		top: -50px;
+		border-bottom: 1px solid transparent;
+	}
+
+	to {
+		top: 0;
+		border-bottom: 1px solid black;
+	}
+}
+
+@keyframes nav-unstick {
+	from {
+		top: 0;
+		border-bottom: 1px solid black;
+	}
+
+	to {
+		top: -100px;
+		border-bottom: 1px solid transparent;
+	}
+}

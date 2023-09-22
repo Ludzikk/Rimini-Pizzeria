@@ -1,0 +1,64 @@
+@use "./colors" as *;
+
+.main {
+	&__section {
+		padding: 6em 0;
+		background-color: $bg-one;
+	}
+}
+
+.aboutus {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	&__left, &__right {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.faq {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: 75px;
+	margin: 0.5em 0;
+	font-size: 2rem;
+	text-align: center;
+	color: $white-text;
+	background-color: $bg-two;
+	overflow: hidden;
+	transition: max-height 1s;
+
+	&__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	}
+
+	&__bottom {
+		width: 70%;
+		padding-bottom: 1em;
+		margin: 0 auto;
+	}
+
+	&__icon {
+		font-size: 3.3rem;
+		color: $btn;
+		cursor: pointer;
+		transition: color .5s;
+
+		&:hover {
+			color: $btn-hover;
+		}
+	}
+}
+
+.faq-active {
+	max-height: 500px;
+}
