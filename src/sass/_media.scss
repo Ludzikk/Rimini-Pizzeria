@@ -6,7 +6,8 @@
 
 @media (min-width: 992px) {
 	.nav {
-		&__list, &__btn {
+		&__list,
+		&__btn {
 			display: flex;
 		}
 
@@ -28,27 +29,11 @@
 	}
 
 	.aboutus {
-		&__container {
-			flex-direction: row;
-		}
+		flex-direction: row;
 
-		&__info {
-			padding: 1em 0.5em;
-			font-size: 3.2rem;
-
-			&--line {
-				border: 0;
-			}
-		}
-
-		&__img {
-			&--top {
-				border-radius: 25% 61% 61% 0% / 0% 0% 100% 100%;
-			}
-
-			&--bottom {
-				border-radius: 82% 0% 0% 0% / 87% 25% 25% 0%;
-			}
+		&__left,
+		&__right {
+			width: 50%;
 		}
 	}
 }

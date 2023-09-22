@@ -10,55 +10,47 @@
 .aboutus {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
+	padding-bottom: 5em;
+
+	color: $white-text;
 
 	&__left, &__right {
 		width: 100%;
+		padding: 2em 1em;
+	}
+
+	&__right {
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
-.faq {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-height: 75px;
-	margin: 0.5em 0;
-	font-size: 2rem;
-	text-align: center;
-	color: $white-text;
-	background-color: $bg-two;
-	overflow: hidden;
-	transition: max-height 1s;
-
-	&__top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1em;
+		justify-content: center;
 	}
 
-	&__bottom {
-		width: 70%;
-		padding-bottom: 1em;
-		margin: 0 auto;
+	&__title {
+		font-size: 6rem;
+		font-family: "Kenia", cursive;
+		letter-spacing: 2px;
+		color: $blue-light;
 	}
 
-	&__icon {
-		font-size: 3.3rem;
-		color: $btn;
-		cursor: pointer;
-		transition: color .5s;
+	&__text {
+		font-size: 2rem;
+		letter-spacing: 3px;
+		line-height: 35px;
+	}
 
-		&:hover {
-			color: $btn-hover;
+	&__img {
+		max-width: 500px;
+		min-width: 100px;
+		height: auto;
+		border: 4px solid white;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+		&--behind {
+			position: relative;
+			margin-top: -50px;
+			margin-left: -150px;
+			top: 150px;
 		}
 	}
 }
 
-.faq-active {
-	max-height: 500px;
-}
