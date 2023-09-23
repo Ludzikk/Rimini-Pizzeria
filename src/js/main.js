@@ -1,12 +1,11 @@
 const nav = document.querySelector(".nav");
-const faqItems = document.querySelectorAll(".faq");
 const hamburgerNavBtn = document.querySelector(".nav__hamburger");
 const mobileNav = document.querySelector(".nav__mobilecontainer");
 let triggerNav;
 
 const addBorderToNav = () => {
-	const aboutMe = document.querySelector(".aboutus").getBoundingClientRect();
-	triggerNav = aboutMe.top;
+	const header = document.querySelector(".header").getBoundingClientRect();
+	triggerNav = header.bottom;
 
 	if (triggerNav <= 90) {
 		nav.classList.add("header-active");
@@ -23,9 +22,7 @@ const addBorderToNav = () => {
 	}
 };
 
-// function toggleFaq() {
-// 	this.classList.toggle("faq-active");
-// }
+
 
 const toggleMobileNav = () => {
 	hamburgerNavBtn.classList.toggle("is-active");
@@ -36,9 +33,7 @@ const toggleMobileNav = () => {
 
 const addListeners = () => {
 	document.addEventListener("scroll", addBorderToNav);
-	// faqItems.forEach((item) => {
-	// 	item.addEventListener("click", toggleFaq);
-	// });
+	
 	hamburgerNavBtn.addEventListener("click", toggleMobileNav);
 };
 

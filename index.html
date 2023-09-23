@@ -81,7 +81,7 @@
         <h1 class="header__title">Najlepsza pizza w mieście!</h1>
         <button class="header__btn">zobacz menu</button>
     </div>
-    <video class="header__vid" src="./src/vid/pizzahd.mp4" autoplay muted loop playsinline></video>
+    <video class="header__vid" src="./dist/vid/pizzahd.mp4" autoplay muted loop playsinline></video>
 </div>
 		<main class="main">
 	<section class="main__section">
@@ -111,30 +111,57 @@
 			</div>
 		</div>
 	</section>
+	<section class="main__section main__section--bgtwo">
+		<div class="wrapper">
+			<div class="reviews">
+				<h2 class="section__title">Zadowoleni klienci</h2>
+			</div>
+		</div>
+	</section>
 	<section class="main__section">
 		<div class="wrapper">
-			<div class="aboutus">
-				<div class="aboutus__left">
-					<h2 class="aboutus__title">Rimini Pizzeria</h2>
-					<p class="aboutus__text">
-						Od 15 lat prowadzimy pizzerie w małym zgranym zespole. Tworzymy
-						potrawy z pasją i miłością, tak jak robi to twoja mama. Nasza
-						restouracja znajduje się w Polkowicach. Po wiecęj informacji zajrzyj
-						na zakładkę kontakt.
-					</p>
+			<div class="order">
+				<h2 class="section__title">Jak zamówić?</h2>
+				<div class="order__container">
+					<div class="order__section">
+						<div class="order__top">
+							<div class="order__step">
+								<p class="order__number">1</p>
+								<img
+									class="order__svg"
+									src="./dist/svg/dishplate.svg"
+									alt="Dish Plate"
+								/>
+							</div>
+							<p class="order__text">Wybierz danie</p>
+						</div>
+						<img class="order__arrow" src="./dist/svg/arrow.svg" alt="Arrow" />
+					</div>
+					<div class="order__section">
+						<div class="order__top">
+							<div class="order__step">
+								<p class="order__number">2</p>
+								<img class="order__svg" src="./dist/svg/cart.svg" alt="Cart" />
+							</div>
+							<p class="order__text">Dodaj do koszyka</p>
+						</div>
+						<img class="order__arrow" src="./dist/svg/arrow.svg" alt="Arrow" />
+					</div>
+					<div class="order__section">
+						<div class="order__top">
+							<div class="order__step">
+								<p class="order__number">3</p>
+								<img
+									class="order__svg"
+									src="./dist/svg/delivery.svg"
+									alt="Delivery Car"
+								/>
+							</div>
+							<p class="order__text">Zapłać i czekaj na dostawę</p>
+						</div>
+					</div>
 				</div>
-				<div class="aboutus__right">
-					<img
-						class="aboutus__img"
-						src="./dist/img/mainpic1.jpg"
-						alt="Restauracja od środka"
-					/>
-					<img
-						class="aboutus__img aboutus__img--behind"
-						src="./dist/img/mainpic2.jpg"
-						alt="Restauracja na zewnątrz"
-					/>
-				</div>
+				<button class="header__btn">Zobacz Menu</button>
 			</div>
 		</div>
 	</section>

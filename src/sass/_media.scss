@@ -4,6 +4,23 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.order {
+		&__container {
+			flex-direction: row;
+		}
+
+		&__section {
+			width: 30%;
+			padding: 0;
+		}
+
+		&__arrow {
+			display: block;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	.nav {
 		&__list,
@@ -34,6 +51,12 @@
 		&__left,
 		&__right {
 			width: 50%;
+		}
+	}
+
+	.order {
+		&__arrow {
+			bottom: 35%;
 		}
 	}
 }
