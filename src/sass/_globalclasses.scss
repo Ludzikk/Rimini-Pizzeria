@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -28,4 +30,18 @@
 
 .unactive-mobile-nav {
 	animation: .5s hide-nav forwards;
+}
+
+.dot-active {
+	background-color: $blue-light;
+	box-shadow: $blue-light 0px 0px 15px;
+	transition: background-color .25s;
+
+		&:hover {
+			background-color: $btn;
+		}
+}
+
+.show-review {
+	animation: show-reviews 1s;
 }

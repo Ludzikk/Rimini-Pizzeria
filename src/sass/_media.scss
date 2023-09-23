@@ -2,6 +2,12 @@
 	.header__title {
 		font-size: 5rem;
 	}
+
+	.galerymain {
+		&__imgcontainer {
+			width: 50%;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -17,6 +23,16 @@
 
 		&__arrow {
 			display: block;
+		}
+	}
+
+	.reviews {
+		&__items {
+			flex-direction: row;
+		}
+
+		&__item {
+			width: 40%;
 		}
 	}
 }
@@ -57,6 +73,12 @@
 	.order {
 		&__arrow {
 			bottom: 35%;
+		}
+	}
+
+	.galerymain {
+		&__imgcontainer {
+			width: 300px;
 		}
 	}
 }
