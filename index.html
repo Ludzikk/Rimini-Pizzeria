@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rimini Pizzeria - Zamów naszą pizze online</title>
+		<link rel="shortcut icon" href="./dist/img/favicon.png" type="image/x-icon">
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -41,7 +42,7 @@
 				<a href="./index.html" class="nav__link">dostawa</a>
 			</li>
 			<li class="nav__item">
-				<a href="./index.html" class="nav__link">galeria</a>
+				<a href="./galery.html" class="nav__link">galeria</a>
 			</li>
 			<li class="nav__item">
 				<a href="./index.html" class="nav__link">kontakt</a>
@@ -65,7 +66,7 @@
 					<a href="#" class="nav__mobilelink">dostawa</a>
 				</li>
 				<li class="nav__mobileitem">
-					<a href="#" class="nav__mobilelink">galeria</a>
+					<a href="./galery.html" class="nav__mobilelink">galeria</a>
 				</li>
 				<li class="nav__mobileitem">
 					<a href="#" class="nav__mobilelink">kontakt</a>
@@ -286,7 +287,7 @@
 					</div>
 					
 				</div>
-				<a href="#" class="galerymain__link">Zobacz więcej</a>
+				<a href="./galery.html" class="galerymain__link">Zobacz więcej</a>
 			</div>
 		</div>
 	</section>
@@ -294,10 +295,50 @@
 
 		<footer class="footer">
 	<div class="wrapper">
-	
+		<div class="footer__container">
+			<div class="footer__top">
+				<div class="footer__left">
+					<nav class="footer__nav">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="./index.html" class="footer__link">start</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">menu</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">promocje</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right">
+					<nav class="footer__nav">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">dostawa</a>
+							</li>
+							<li class="footer__item">
+								<a href="./galery.html" class="footer__link">galeria</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">kontakt</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p class="footer__yeartext">
+					&copy;<span id="year">1952</span> Rimini Pizzeria
+				</p>
+			</div>
+		</div>
 	</div>
 </footer>
 
 		<script src="./dist/js/main.min.js"></script>
+		<script src="./dist/js/footeryear.min.js"></script>
+		<script src="./dist/js/togglenav.min.js"></script>
 	</body>
 </html>

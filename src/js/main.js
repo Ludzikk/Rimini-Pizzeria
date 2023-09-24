@@ -1,6 +1,4 @@
 const nav = document.querySelector(".nav");
-const hamburgerNavBtn = document.querySelector(".nav__hamburger");
-const mobileNav = document.querySelector(".nav__mobilecontainer");
 const reviewsItems = document.querySelectorAll(".reviews__items");
 const reviewsDots = document.querySelectorAll(".reviews__dot");
 let triggerNav;
@@ -24,12 +22,7 @@ const addBorderToNav = () => {
 	}
 };
 
-const toggleMobileNav = () => {
-	hamburgerNavBtn.classList.toggle("is-active");
-	mobileNav.classList.toggle("active-mobile-nav");
-	mobileNav.classList.toggle("unactive-mobile-nav");
-	mobileNav.classList.remove("hidden");
-};
+
 
 function changeReview() {
 	const idOfDot = this.id;
@@ -53,7 +46,6 @@ function changeReview() {
 
 const addListeners = () => {
 	document.addEventListener("scroll", addBorderToNav);
-	hamburgerNavBtn.addEventListener("click", toggleMobileNav);
 	reviewsDots.forEach((dot) => {
 		dot.addEventListener("click", changeReview);
 	});

@@ -5,14 +5,15 @@
 	top: 0;
 	width: 100%;
 	background: none;
-	z-index: 100;
+	z-index: 1;
 
 	&__logo {
+		position: relative;
 		font-size: 4rem;
 		font-family: "Kenia", cursive;
 		text-decoration: none;
 		color: $white-text;
-
+		z-index: 5;
 		transition: color 0.5s;
 
 		&:hover {
@@ -80,7 +81,8 @@
 		left: 0;
 		right: 0;
 		padding: 3em 0;
-		background-color: #333;
+		background-color: rgb(30, 30, 30);
+		box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 	}
 
 	&__mobilelist {

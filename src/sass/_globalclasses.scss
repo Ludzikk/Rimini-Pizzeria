@@ -9,15 +9,21 @@
 .header-active {
 	position: fixed;
 	background-color: rgb(30, 30, 30);
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
 	animation: nav-stick 0.5s forwards;
 }
 
 .header-unactive {
 	position: fixed;
 	background-color: rgb(30, 30, 30);
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
 	animation: nav-unstick 0.5s forwards;
+}
+
+.navsubpage {
+	position: fixed;
+	background-color: rgb(30, 30, 30);
+	box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
 }
 
 .hidden {
@@ -25,21 +31,21 @@
 }
 
 .active-mobile-nav {
-	animation: .5s show-nav;
+	animation: 0.5s show-nav;
 }
 
 .unactive-mobile-nav {
-	animation: .5s hide-nav forwards;
+	animation: 0.5s hide-nav forwards;
 }
 
 .dot-active {
 	background-color: $blue-light;
 	box-shadow: $blue-light 0px 0px 15px;
-	transition: background-color .25s;
+	transition: background-color 0.25s;
 
-		&:hover {
-			background-color: $btn;
-		}
+	&:hover {
+		background-color: $btn;
+	}
 }
 
 .show-review {
