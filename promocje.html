@@ -4,7 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rimini Pizzeria - Galeria</title>
-		<link rel="shortcut icon" href="./dist/img/favicon.png" type="image/x-icon">
+		<link
+			rel="shortcut icon"
+			href="./dist/img/favicon.png"
+			type="image/x-icon"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -79,82 +83,65 @@
 		<main class="main">
 			<section class="main__section">
 				<div class="wrapper">
-					<div class="galery">
-						<h2 class="section__title">Galeria</h2>
-						<div class="galery__container">
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/mainpic1.jpg"
-									alt="Restauracja na zewnątrz"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/mainpic2.jpg"
-									alt="Restauracja w środku"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/pizza1.jpg"
-									alt="Pizza na stole"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/pizza2.jpg"
-									alt="Pizza przy piecu"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/pizza6.jpg"
-									alt="Dwie pizze na stole"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/pizza5.jpg"
-									alt="Stoliki z krzesłami na zewnątrz resauracji"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-
-								<img
-									class="galery__img"
-									src="./dist/img/pizza4.jpg"
-									alt="Kucharz wsadzający pizze do pieca"
-								/>
-							</div>
-							<div class="galery__imgcontainer">
-								
-								<img
-									class="galery__img"
-									src="./dist/img/pizza3.jpg"
-									alt="Pizza z ciągnacym sie serem"
-								/>
-							</div>
+					<div class="promotion promotion--top">
+						<h2 class="section__title">Rodzaje zniżek</h2>
+						<div class="promotion__container">
+							<ul class="promotion__list">
+								<li class="promotion__item">
+									<p class="promotion__type">Stały klient</p>
+								</li>
+								<li class="promotion__item">
+									<p class="promotion__type">Kupony</p>
+								</li>
+								<li class="promotion__item">
+									<p class="promotion__type">Reklama</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main__section main__section--bgtwo">
+				<div class="wrapper">
+					<div class="promotion">
+						<h2 class="section__title">Stały klient</h2>
+						<div class="promotion__container">
+							<p class="promotion__text">
+								Aby dostawać zniżki za bycie stałym klientem, wystaczy że w
+								jakiś sposób cie zapamiętamy. Zniżki rozdawane są losowo od 10%
+								do nawet 50% za zamówienie.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main__section">
+				<div class="wrapper">
+					<div class="promotion">
+						<h2 class="section__title">Kupony</h2>
+						<div class="promotion__container">
+							<p class="promotion__text">
+								Za każde zamówienie powyżej 50zł dostajesz kupon wraz z
+								paragonem. Za 5 kuponów możesz dostać zamówienie za 50zł za
+								darmo. Tak 1 kupon = 10zł.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main__section main__section--bgtwo">
+				<div class="wrapper">
+					<div class="promotion">
+						<h2 class="section__title">Reklama</h2>
+						<div class="promotion__container">
+							<p class="promotion__text">
+                                Aby dostać kupon za reklame naszej pizzeri. Zgłoś się do nas na maila lub telefonicznie. Dane w <a class="promotion__link" href="./kontakt.html">kontakt</a> po więcej informacji.
+                            </p>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-<div class="img hidden">
-	<div class="img__bg"></div>
-	<img src="./dist/img/mainpic1.jpg" alt="" class="img__pic">
-</div>
 		<footer class="footer">
 	<div class="wrapper">
 		<div class="footer__container">
@@ -201,7 +188,6 @@
 
 		<script src="./dist/js/footeryear.min.js"></script>
 		<script src="./dist/js/checknavstate.min.js"></script>
-		<script src="./dist/js/galery.min.js"></script>
 		<script src="./dist/js/togglenav.min.js"></script>
 	</body>
 </html>

@@ -14,8 +14,32 @@
 			display: flex;
 		}
 
-		&__left, &__right {
+		&__left,
+		&__right {
 			padding: 0em 3em;
+		}
+	}
+
+	.promotion {
+		&__list {
+			flex-direction: row;
+		}
+
+		&__item {
+			padding: 0.5em 0.75em;
+		}
+	}
+
+	.contact {
+		&__container {
+			flex-direction: row;
+		}
+
+		&__left,
+		&__right {
+			width: 50%;
+
+			font-size: 2.2rem;
 		}
 	}
 }
