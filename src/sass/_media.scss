@@ -31,15 +31,8 @@
 	}
 
 	.contact {
-		&__container {
+		&__container--social {
 			flex-direction: row;
-		}
-
-		&__left,
-		&__right {
-			width: 50%;
-
-			font-size: 2.2rem;
 		}
 	}
 }
@@ -68,6 +61,11 @@
 		&__item {
 			width: 40%;
 		}
+	}
+
+	.contact__container--address {
+		align-items: flex-start;
+		flex-direction: row;
 	}
 }
 
