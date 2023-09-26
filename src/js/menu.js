@@ -318,7 +318,7 @@ const createItems = () => {
 		itemAmount.textContent = sessionStorage.getItem("Napoj") + "szt";
 		itemPrice.setAttribute("class", "order__price");
 		itemPrice.textContent =
-			sessionStorage.getItem("Napoj") * everyFood.napojg.cost + "zł";
+			sessionStorage.getItem("Napoj") * everyFood.napoj.cost + "zł";
 		itemRightSide.append(itemAmount, itemPrice);
 		item.append(itemName, itemRightSide);
 		cartList.append(item);
