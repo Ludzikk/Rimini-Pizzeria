@@ -5,6 +5,10 @@ const cartList = document.querySelector(".order__list");
 const orderContainer = document.querySelector(".order");
 const closeBtn = document.querySelector(".order__close");
 const valueOfCart = document.querySelector(".order__money");
+const paymentItem = document.querySelectorAll(".order__paymentitem");
+const endText = document.querySelector(".order__end");
+const paymentList = document.querySelector(".order__paymentlist");
+const nextBtn = document.querySelector(".order__next");
 const everyFood = {
 	margherita: {
 		name: "Margherita",
@@ -83,11 +87,11 @@ function addToOrder() {
 			}
 			break;
 		case 6:
-			if (sessionStorage.getItem("Ziemnaczki") === null) {
-				sessionStorage.setItem("Ziemnaczki", 1);
-			} else if (sessionStorage.getItem("Ziemnaczki") !== null) {
-				const currentAmount = sessionStorage.getItem("Ziemnaczki");
-				sessionStorage.setItem("Ziemnaczki", parseInt(currentAmount) + 1);
+			if (sessionStorage.getItem("Ziemniaczki") === null) {
+				sessionStorage.setItem("Ziemniaczki", 1);
+			} else if (sessionStorage.getItem("Ziemniaczki") !== null) {
+				const currentAmount = sessionStorage.getItem("Ziemniaczki");
+				sessionStorage.setItem("Ziemniaczki", parseInt(currentAmount) + 1);
 			}
 			break;
 		case 7:
@@ -134,8 +138,8 @@ const checkAmount = () => {
 		amount = amount + parseInt(sessionStorage.getItem("Frytki"));
 	}
 
-	if (sessionStorage.getItem("Ziemnaczki") !== null) {
-		amount = amount + parseInt(sessionStorage.getItem("Ziemnaczki"));
+	if (sessionStorage.getItem("Ziemniaczki") !== null) {
+		amount = amount + parseInt(sessionStorage.getItem("Ziemniaczki"));
 	}
 
 	if (sessionStorage.getItem("Sos") !== null) {
@@ -261,7 +265,7 @@ const createItems = () => {
 		cartList.append(item);
 	}
 
-	if (sessionStorage.getItem("Ziemnaczki") !== null) {
+	if (sessionStorage.getItem("Ziemniaczki") !== null) {
 		const item = document.createElement("li");
 		const itemRightSide = document.createElement("div");
 		const itemName = document.createElement("p");
@@ -273,7 +277,7 @@ const createItems = () => {
 		itemName.setAttribute("class", "order__name");
 		itemName.textContent = everyFood.ziemniaczki.name;
 		itemAmount.setAttribute("class", "order__howmany");
-		itemAmount.textContent = sessionStorage.getItem("Ziemnaczki") + "szt";
+		itemAmount.textContent = sessionStorage.getItem("Ziemniaczki") + "szt";
 		itemPrice.setAttribute("class", "order__price");
 		itemPrice.textContent =
 			sessionStorage.getItem("Ziemniaczki") * everyFood.ziemniaczki.cost + "zł";
@@ -324,6 +328,11 @@ const createItems = () => {
 		cartList.append(item);
 	}
 
+	cartList.classList.remove("hidden");
+	paymentList.classList.add("hidden");
+	nextBtn.classList.remove("hidden");
+	endText.classList.add("hidden");
+
 	toggleCart();
 	setValueOfCart();
 };
@@ -349,10 +358,36 @@ const setValueOfCart = () => {
 	}
 };
 
+const togglePayment = () => {
+	paymentList.classList.remove("hidden");
+	cartList.classList.add("hidden");
+	nextBtn.classList.toggle("hidden");
+};
+
+const endOfOrder = () => {
+	paymentList.classList.add("hidden");
+	endText.classList.remove("hidden");
+
+	sessionStorage.removeItem("Margherita");
+	sessionStorage.removeItem("Diabelska");
+	sessionStorage.removeItem("Wiejska");
+	sessionStorage.removeItem("Serowa");
+	sessionStorage.removeItem("Frytki");
+	sessionStorage.removeItem("Ziemniaczki");
+	sessionStorage.removeItem("Sos");
+	sessionStorage.removeItem("Napoj");
+
+	checkAmount()
+};
+
 orderBtn.forEach((btn) => {
 	btn.addEventListener("click", addToOrder);
 });
 cartBtn.addEventListener("click", createItems);
 closeBtn.addEventListener("click", toggleCart);
+paymentItem.forEach((item) => {
+	item.addEventListener("click", endOfOrder);
+});
+nextBtn.addEventListener("click", togglePayment);
 
 checkAmount();

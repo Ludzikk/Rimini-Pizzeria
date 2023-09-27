@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Rimini Pizzeria - Galeria</title>
+		<title>Rimini Pizzeria - Menu</title>
 		<link
 			rel="shortcut icon"
 			href="./dist/img/favicon.png"
@@ -140,7 +140,7 @@
 										/>
 									</div>
 									<div class="menu__right">
-										<p class="menu__title">Ziemnaczki(120g)</p>
+										<p class="menu__title">Ziemniaczki(120g)</p>
 										<p class="menu__text">
 											sos pomidorowy, ser, pieczarki, salami, szynka, papryka
 											peperoni, chilli
@@ -207,9 +207,21 @@
 					<i class="order__close fa-solid fa-x"></i>
 				</div>
 				<div class="order__mid">
+					<p class="order__end hidden">Twoje zamówienie zostało złożone</p>
 					<ul class="order__list">		
 					</ul>
-					<p class="order__sum">Wartość koszyka: <span class="order__money">12zł</span></p>
+					<ul class="order__paymentlist hidden">
+						<p class="order__paymenttitle">
+							Wybierz metode płatności:
+						</p>
+						<li class="order__paymentitem">
+							<p class="order__paymenttext">Blik</p>
+						</li>	
+						<li class="order__paymentitem">
+							<p class="order__paymenttext">Karta</p>
+						</li>
+					</ul>
+					<p class="order__sum">Wartość koszyka: <span class="order__money">0zł</span></p>
 				</div>
 				<div class="order__bottom">
 					<p class="order__deliver">*Koszt dostawy 6zł w przypadku zamówień poniżej 60zł.</p>
