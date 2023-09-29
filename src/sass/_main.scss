@@ -70,17 +70,31 @@
 	}
 
 	&__item {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 		margin: 0 2em 3em 2em;
+		padding: 1em 2em;
 		width: 70%;
-		min-height: 150px;
-		// box-shadow: $blue-light 0px 0px 15px;
-		border: 2px solid $blue-light;
-		border-radius: 10px;
+		max-height: 200px;
+		min-height: 200px;
+		border-radius: 25px;
 		text-align: center;
+		background-color: $bg-two;
+	}
+
+	&__icon {
+		position: absolute;
+		top: -10px;
+		left: 0;
+		padding: 0.3em;
+		font-size: 3rem;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background-color: $blue-light;
 	}
 
 	&__text {
